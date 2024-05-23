@@ -16,8 +16,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('Home');
+    return view('home');
 });
 
 
 Route::get('tasks', [tasksController::class, 'index']);
+Route::get('tasks/create', [tasksController::class, 'create']);
+Route::post('tasks', [tasksController::class, 'store']);
+Route::get('tasks/{id}/edit', [tasksController::class, 'edit']);

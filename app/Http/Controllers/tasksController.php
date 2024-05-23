@@ -10,4 +10,20 @@ class tasksController extends Controller
     {
         return view('tasks.index');
     }
+
+
+    public function create()
+    {
+        return view('tasks.add');
+    }
+
+    public function store(Request $request)
+    {
+        dd($request->all());
+    }
+
+    public function edit()
+    {
+        return view('tasks.edit');
+    }
 }
